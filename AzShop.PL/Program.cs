@@ -1,7 +1,8 @@
-
-using AzShop.BLL.Services;
+using AzShop.BLL.Services.Classes;
+using AzShop.BLL.Services.Interface;
 using AzShop.DAL.Data;
-using AzShop.DAL.Repository;
+using AzShop.DAL.Repository.Classes;
+using AzShop.DAL.Repository.Interface;
 using Microsoft.EntityFrameworkCore;
 using Scalar;
 using Scalar.AspNetCore;
@@ -20,6 +21,8 @@ namespace AzShop.PL
                 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
             builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
             builder.Services.AddScoped<ICategoryService, CategoryService>();
+            builder.Services.AddScoped<IBrandRepository, BrandRepository>();
+            builder.Services.AddScoped<IBrandService, BrandService>();
 
             builder.Services.AddControllers();
             // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AzShop.DAL.DTO.Responses
 {
-    public class CategoryResponse
+    public class BrandResponse
     {
         public int Id { get; set; }
         public string Name { get; set; }

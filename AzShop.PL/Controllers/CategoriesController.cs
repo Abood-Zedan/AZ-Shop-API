@@ -1,4 +1,4 @@
-﻿using AzShop.BLL.Services;
+﻿using AzShop.BLL.Services.Interface;
 using AzShop.DAL.DTO.Requests;
 using Azure.Core;
 using Microsoft.AspNetCore.Http;
@@ -19,25 +19,25 @@ namespace AzShop.PL.Controllers
         [HttpGet("")]
         public IActionResult GetAll()
         {
-            return Ok(_categoryService.GetAllCategories());
+            return Ok(_categoryService.GetAll());
         }
         [HttpGet("{id}")]
         public IActionResult Get([FromRoute] int id)
         {
-            var category = _categoryService.GetCategoryById(id);
+            var category = _categoryService.GetById(id);
             if (category is null) return NotFound();
             return Ok(category);
         }
         [HttpPost("")]
         public IActionResult Create([FromBody] CategoryRequest request)
         {
-            var id = _categoryService.CreateCategory(request);
-            return CreatedAtAction(nameof(Get), new { id });
+            var id = _categoryService.Create(request);
+            return CreatedAtAction(nameof(Get), new { id }, new {message = request});
         }
         [HttpPatch("{id}")]
         public IActionResult Update([FromRoute] int id, [FromBody] CategoryRequest request)
         {
-            var update = _categoryService.UpdateCategory(id, request);
+            var update = _categoryService.Update(id, request);
             return update > 0 ? Ok() : NotFound();
         }
         [HttpPatch("ToggleStatus/{id}")]
@@ -49,7 +49,7 @@ namespace AzShop.PL.Controllers
         [HttpDelete("")]
         public IActionResult Delete([FromRoute] int id)
         {
-            var delete = _categoryService.DeleteCategory(id);
+            var delete = _categoryService.Delete(id);
             return delete > 0 ? Ok() : NotFound();
         }
     }
