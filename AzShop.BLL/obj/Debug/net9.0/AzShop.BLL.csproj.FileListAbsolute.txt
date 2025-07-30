@@ -1,0 +1,16 @@
+C:\src\Web\Full-Stack\BackEnd\api\Project\AzShop\AzShop.BLL\bin\Debug\net9.0\AzShop.BLL.deps.json
+C:\src\Web\Full-Stack\BackEnd\api\Project\AzShop\AzShop.BLL\bin\Debug\net9.0\AzShop.BLL.dll
+C:\src\Web\Full-Stack\BackEnd\api\Project\AzShop\AzShop.BLL\bin\Debug\net9.0\AzShop.BLL.pdb
+C:\src\Web\Full-Stack\BackEnd\api\Project\AzShop\AzShop.BLL\bin\Debug\net9.0\AzShop.DAL.dll
+C:\src\Web\Full-Stack\BackEnd\api\Project\AzShop\AzShop.BLL\bin\Debug\net9.0\AzShop.DAL.pdb
+C:\src\Web\Full-Stack\BackEnd\api\Project\AzShop\AzShop.BLL\obj\Debug\net9.0\AzShop.BLL.csproj.AssemblyReference.cache
+C:\src\Web\Full-Stack\BackEnd\api\Project\AzShop\AzShop.BLL\obj\Debug\net9.0\AzShop.BLL.GeneratedMSBuildEditorConfig.editorconfig
+C:\src\Web\Full-Stack\BackEnd\api\Project\AzShop\AzShop.BLL\obj\Debug\net9.0\AzShop.BLL.AssemblyInfoInputs.cache
+C:\src\Web\Full-Stack\BackEnd\api\Project\AzShop\AzShop.BLL\obj\Debug\net9.0\AzShop.BLL.AssemblyInfo.cs
+C:\src\Web\Full-Stack\BackEnd\api\Project\AzShop\AzShop.BLL\obj\Debug\net9.0\AzShop.BLL.csproj.CoreCompileInputs.cache
+C:\src\Web\Full-Stack\BackEnd\api\Project\AzShop\AzShop.BLL\obj\Debug\net9.0\AzShop.BLL.sourcelink.json
+C:\src\Web\Full-Stack\BackEnd\api\Project\AzShop\AzShop.BLL\obj\Debug\net9.0\AzShop.BLL.csproj.Up2Date
+C:\src\Web\Full-Stack\BackEnd\api\Project\AzShop\AzShop.BLL\obj\Debug\net9.0\AzShop.BLL.dll
+C:\src\Web\Full-Stack\BackEnd\api\Project\AzShop\AzShop.BLL\obj\Debug\net9.0\refint\AzShop.BLL.dll
+C:\src\Web\Full-Stack\BackEnd\api\Project\AzShop\AzShop.BLL\obj\Debug\net9.0\AzShop.BLL.pdb
+C:\src\Web\Full-Stack\BackEnd\api\Project\AzShop\AzShop.BLL\obj\Debug\net9.0\ref\AzShop.BLL.dll

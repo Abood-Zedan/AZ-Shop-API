@@ -1,0 +1,13 @@
+C:\src\Web\Full-Stack\BackEnd\api\Project\AzShop\AzShop.DAL\bin\Debug\net9.0\AzShop.DAL.deps.json
+C:\src\Web\Full-Stack\BackEnd\api\Project\AzShop\AzShop.DAL\bin\Debug\net9.0\AzShop.DAL.dll
+C:\src\Web\Full-Stack\BackEnd\api\Project\AzShop\AzShop.DAL\bin\Debug\net9.0\AzShop.DAL.pdb
+C:\src\Web\Full-Stack\BackEnd\api\Project\AzShop\AzShop.DAL\obj\Debug\net9.0\AzShop.DAL.csproj.AssemblyReference.cache
+C:\src\Web\Full-Stack\BackEnd\api\Project\AzShop\AzShop.DAL\obj\Debug\net9.0\AzShop.DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\src\Web\Full-Stack\BackEnd\api\Project\AzShop\AzShop.DAL\obj\Debug\net9.0\AzShop.DAL.AssemblyInfoInputs.cache
+C:\src\Web\Full-Stack\BackEnd\api\Project\AzShop\AzShop.DAL\obj\Debug\net9.0\AzShop.DAL.AssemblyInfo.cs
+C:\src\Web\Full-Stack\BackEnd\api\Project\AzShop\AzShop.DAL\obj\Debug\net9.0\AzShop.DAL.csproj.CoreCompileInputs.cache
+C:\src\Web\Full-Stack\BackEnd\api\Project\AzShop\AzShop.DAL\obj\Debug\net9.0\AzShop.DAL.sourcelink.json
+C:\src\Web\Full-Stack\BackEnd\api\Project\AzShop\AzShop.DAL\obj\Debug\net9.0\AzShop.DAL.dll
+C:\src\Web\Full-Stack\BackEnd\api\Project\AzShop\AzShop.DAL\obj\Debug\net9.0\refint\AzShop.DAL.dll
+C:\src\Web\Full-Stack\BackEnd\api\Project\AzShop\AzShop.DAL\obj\Debug\net9.0\AzShop.DAL.pdb
+C:\src\Web\Full-Stack\BackEnd\api\Project\AzShop\AzShop.DAL\obj\Debug\net9.0\ref\AzShop.DAL.dll

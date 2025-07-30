@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\AzShop.PL.props" />
+</Project>
