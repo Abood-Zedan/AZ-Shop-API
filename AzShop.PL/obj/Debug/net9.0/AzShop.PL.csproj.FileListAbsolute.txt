@@ -172,3 +172,8 @@ C:\src\Web\Full-Stack\BackEnd\api\Project\AzShop\AzShop.PL\obj\Debug\net9.0\ref\
 C:\src\Web\Full-Stack\BackEnd\api\Project\AzShop\AzShop.PL\bin\Debug\net9.0\Mapster.dll
 C:\src\Web\Full-Stack\BackEnd\api\Project\AzShop\AzShop.PL\bin\Debug\net9.0\Mapster.Core.dll
 C:\src\Web\Full-Stack\BackEnd\api\Project\AzShop\AzShop.PL\bin\Debug\net9.0\Scalar.AspNetCore.dll
+C:\src\Web\Full-Stack\BackEnd\api\Project\AzShop\AzShop.PL\bin\Debug\net9.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\src\Web\Full-Stack\BackEnd\api\Project\AzShop\AzShop.PL\bin\Debug\net9.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\src\Web\Full-Stack\BackEnd\api\Project\AzShop\AzShop.PL\bin\Debug\net9.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\src\Web\Full-Stack\BackEnd\api\Project\AzShop\AzShop.PL\bin\Debug\net9.0\Microsoft.Extensions.Identity.Core.dll
+C:\src\Web\Full-Stack\BackEnd\api\Project\AzShop\AzShop.PL\bin\Debug\net9.0\Microsoft.Extensions.Identity.Stores.dll

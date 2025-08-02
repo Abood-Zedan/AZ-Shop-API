@@ -1,8 +1,11 @@
 using AzShop.BLL.Services.Classes;
 using AzShop.BLL.Services.Interface;
 using AzShop.DAL.Data;
+using AzShop.DAL.Models;
 using AzShop.DAL.Repository.Classes;
 using AzShop.DAL.Repository.Interface;
+using AzShop.DAL.Utils;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Scalar;
 using Scalar.AspNetCore;
@@ -11,7 +14,7 @@ namespace AzShop.PL
 {
     public class Program
     {
-        public static void Main(string[] args)
+        public static async Task Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
 
@@ -23,6 +26,8 @@ namespace AzShop.PL
             builder.Services.AddScoped<ICategoryService, CategoryService>();
             builder.Services.AddScoped<IBrandRepository, BrandRepository>();
             builder.Services.AddScoped<IBrandService, BrandService>();
+            builder.Services.AddScoped<ISeedData, SeedData>();
+            builder.Services.AddIdentity<ApplicationUser, IdentityRole>().AddEntityFrameworkStores<ApplicationDbContext>();
 
             builder.Services.AddControllers();
             // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
@@ -36,6 +41,11 @@ namespace AzShop.PL
                 app.MapOpenApi();
                 app.MapScalarApiReference();
             }
+
+            var scope = app.Services.CreateScope();
+            var objectOfSeedData = scope.ServiceProvider.GetRequiredService<ISeedData>();
+            await objectOfSeedData.DataSeedingAsync();
+            await objectOfSeedData.IdentityDataSeedingAsync();
 
             app.UseHttpsRedirection();
 
