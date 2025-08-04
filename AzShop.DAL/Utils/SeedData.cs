@@ -65,8 +65,6 @@ namespace AzShop.DAL.Utils
                     FullName = "Abood Zedan",
                     PhoneNumber = "0592663711",
                     UserName = "aboodZedan",
-                    City = "Tulkarm",
-                    Street = "SSD-425"
                 };
                 var user2 = new ApplicationUser()
                 {
@@ -74,8 +72,6 @@ namespace AzShop.DAL.Utils
                     FullName = "Ahmad Zedan",
                     PhoneNumber = "0592663710",
                     UserName = "ahmadZedan",
-                    City = "Tulkarm",
-                    Street = "SSD-430"
                 };
                 var user3 = new ApplicationUser()
                 {
@@ -83,20 +79,17 @@ namespace AzShop.DAL.Utils
                     FullName = "Omar Zedan",
                     PhoneNumber = "0592668541",
                     UserName = "omarZedan",
-                    City = "Tulkarm",
-                    Street = "SSD-352"
                 };
 
-                await _userManager.CreateAsync(user1, "pass@123");
-                await _userManager.CreateAsync(user2, "pass@456");
-                await _userManager.CreateAsync(user3, "pass@789");
+                await _userManager.CreateAsync(user1, "Pass@123");
+                await _userManager.CreateAsync(user2, "Pass@456");
+                await _userManager.CreateAsync(user3, "Pass@789");
 
                 await _userManager.AddToRoleAsync(user1, "Admin");
                 await _userManager.AddToRoleAsync(user2, "SuperAdmin");
                 await _userManager.AddToRoleAsync(user3, "Customer");
             }
 
-            await _context.SaveChangesAsync();
         }
     }
 }
