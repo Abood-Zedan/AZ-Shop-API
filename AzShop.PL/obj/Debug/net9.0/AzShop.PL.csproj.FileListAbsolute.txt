@@ -178,3 +178,7 @@ C:\src\Web\Full-Stack\BackEnd\api\Project\AzShop\AzShop.PL\bin\Debug\net9.0\Micr
 C:\src\Web\Full-Stack\BackEnd\api\Project\AzShop\AzShop.PL\bin\Debug\net9.0\Microsoft.Extensions.Identity.Core.dll
 C:\src\Web\Full-Stack\BackEnd\api\Project\AzShop\AzShop.PL\bin\Debug\net9.0\Microsoft.Extensions.Identity.Stores.dll
 C:\src\Web\Full-Stack\BackEnd\api\Project\AzShop\AzShop.PL\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\src\Web\Full-Stack\BackEnd\api\Project\AzShop\AzShop.PL\bin\Debug\net9.0\Microsoft.AspNetCore.Identity.UI.dll
+C:\src\Web\Full-Stack\BackEnd\api\Project\AzShop\AzShop.PL\bin\Debug\net9.0\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\src\Web\Full-Stack\BackEnd\api\Project\AzShop\AzShop.PL\bin\Debug\net9.0\Microsoft.Extensions.FileProviders.Embedded.dll
+C:\src\Web\Full-Stack\BackEnd\api\Project\AzShop\AzShop.PL\bin\Debug\net9.0\AzShop.PL.staticwebassets.runtime.json

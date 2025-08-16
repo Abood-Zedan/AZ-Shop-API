@@ -8,7 +8,7 @@ namespace AzShop.PL.Areas.Admin.Controllers
 {
     [Route("api/[area]/[controller]")]
     [Area("Admin")]
-    [Authorize(Roles = "Admin")]
+    [Authorize(Roles = "Admin,SuperAdmin")]
     [ApiController]
     public class BrandsController : ControllerBase
     {
@@ -29,9 +29,9 @@ namespace AzShop.PL.Areas.Admin.Controllers
             return Ok(category);
         }
         [HttpPost("")]
-        public IActionResult Create([FromBody] BrandRequest request)
+        public async Task<IActionResult> Create([FromForm] BrandRequest request)
         {
-            var id = _brandService.Create(request);
+            var id = await _brandService.CreateFile(request);
             return CreatedAtAction(nameof(Get), new { id }, new { message = request });
         }
         [HttpPatch("{id}")]

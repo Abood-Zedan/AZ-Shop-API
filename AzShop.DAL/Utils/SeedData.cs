@@ -37,14 +37,14 @@ namespace AzShop.DAL.Utils
                     new Category { Name = "Labtop"}
                     );
             }
-            if(! await _context.Brands.AnyAsync())
-            {
-                await _context.Brands.AddRangeAsync(
-                    new Brand { Name = "Samsung"},
-                    new Brand { Name = "Apple"},
-                    new Brand { Name = "Nike" }
-                    );
-            }
+            //if(! await _context.Brands.AnyAsync())
+            //{
+            //    await _context.Brands.AddRangeAsync(
+            //        new Brand { Name = "Samsung"},
+            //        new Brand { Name = "Apple"},
+            //        new Brand { Name = "Nike" }
+            //        );
+            //}
             await _context.SaveChangesAsync();
         }
 
@@ -65,6 +65,7 @@ namespace AzShop.DAL.Utils
                     FullName = "Abood Zedan",
                     PhoneNumber = "0592663711",
                     UserName = "aboodZedan",
+                    EmailConfirmed= true,
                 };
                 var user2 = new ApplicationUser()
                 {
@@ -72,6 +73,7 @@ namespace AzShop.DAL.Utils
                     FullName = "Ahmad Zedan",
                     PhoneNumber = "0592663710",
                     UserName = "ahmadZedan",
+                    EmailConfirmed = true,
                 };
                 var user3 = new ApplicationUser()
                 {
@@ -79,6 +81,7 @@ namespace AzShop.DAL.Utils
                     FullName = "Omar Zedan",
                     PhoneNumber = "0592668541",
                     UserName = "omarZedan",
+                    EmailConfirmed = true,
                 };
 
                 await _userManager.CreateAsync(user1, "Pass@123");
@@ -89,7 +92,7 @@ namespace AzShop.DAL.Utils
                 await _userManager.AddToRoleAsync(user2, "SuperAdmin");
                 await _userManager.AddToRoleAsync(user3, "Customer");
             }
-
+            await _context.SaveChangesAsync();
         }
     }
 }

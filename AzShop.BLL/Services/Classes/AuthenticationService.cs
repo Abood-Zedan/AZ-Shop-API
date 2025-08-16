@@ -3,6 +3,7 @@ using AzShop.DAL.DTO.Requests;
 using AzShop.DAL.DTO.Responses;
 using AzShop.DAL.Models;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using System;
@@ -19,12 +20,15 @@ namespace AzShop.BLL.Services.Classes
     {
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly IConfiguration _configuration;
+        private readonly IEmailSender _emailSender;
 
         public AuthenticationService(UserManager<ApplicationUser> userManager,
-            IConfiguration configuration)
+            IConfiguration configuration,
+            IEmailSender  emailSender)
         {
             _userManager = userManager;
             _configuration = configuration;
+            _emailSender = emailSender;
         }
 
         public async Task<UserResponse> LoginAsync(LoginRequest loginRequest)
@@ -33,6 +37,11 @@ namespace AzShop.BLL.Services.Classes
             if(user is null)
             {
                 throw new Exception("Invalid email or password");
+            }
+
+            if(! await _userManager.IsEmailConfirmedAsync(user))
+            {
+                throw new Exception("Please Confirm your email");
             }
 
             var isPassValid = await _userManager.CheckPasswordAsync(user, loginRequest.Password);
@@ -45,6 +54,20 @@ namespace AzShop.BLL.Services.Classes
             {
                 Token = await CreateTokenAsync(user)
             };
+        }
+        public async Task<string> ConfirmEmail(string token, string userId)
+        {
+            var user = await _userManager.FindByIdAsync(userId);
+            if(user is null)
+            {
+                throw new Exception("user not found");
+            }
+            var result = await _userManager.ConfirmEmailAsync(user, token);
+            if (result.Succeeded)
+            {
+                return "Email confirmed succesfully";
+            }
+            return "Email confirmed failed";
         }
 
         public async Task<UserResponse> RegisterAsync(RegisterRequest registerRequest)
@@ -60,6 +83,12 @@ namespace AzShop.BLL.Services.Classes
             var result = await _userManager.CreateAsync(user, registerRequest.Password);
             if (result.Succeeded)
             {
+                var token = await _userManager.GenerateEmailConfirmationTokenAsync(user);
+                var escapeToken = Uri.EscapeDataString(token);
+                var emailUrl = $"https://localhost:7254/api/identity/Account/ConfirmEmail?token={escapeToken}&userId={user.Id}";
+                await _emailSender.SendEmailAsync(user.Email , "Welcome", $"<h1> Hello {user.FullName} </h1>" + 
+                    $"<a href='{emailUrl}'>confirm</a>"
+                    );
                 return new UserResponse()
                 {
                     Token = registerRequest.Email
@@ -95,6 +124,36 @@ namespace AzShop.BLL.Services.Classes
                 );
 
             return new JwtSecurityTokenHandler().WriteToken(token);
+        }
+        public async Task<bool> ForgotPasswordAsync(ForgotPassword request)
+        {
+            var user = await _userManager.FindByEmailAsync(request.Email);
+            if (user is null) throw new Exception("user not found");
+
+            var random = new Random();
+            var code = random.Next(1000, 9999).ToString();
+
+            user.CodeResetPassword = code;
+            user.PasswordResetCodeExpiry = DateTime.UtcNow.AddMinutes(5);
+
+            await _userManager.UpdateAsync(user);
+
+            await _emailSender.SendEmailAsync(request.Email, "Reset Password", $"<p>code is {code}</p>");
+            return true;
+        }
+        public async Task<bool> ResetPasswordAsync(ResetPasswordRequest request)
+        {
+            var user = await _userManager.FindByEmailAsync(request.Email);
+            if (user is null) throw new Exception("user not found");
+            if (user.CodeResetPassword != request.code) return false;
+            if (user.PasswordResetCodeExpiry < DateTime.UtcNow) return false;
+            var token = await _userManager.GeneratePasswordResetTokenAsync(user);
+            var result = await _userManager.ResetPasswordAsync(user, token, request.NewPassword);
+            if (result.Succeeded)
+            {
+                await _emailSender.SendEmailAsync(request.Email, "change password", "<h1>your password is changed</h1>");
+            }
+            return true;
         }
     }
 }

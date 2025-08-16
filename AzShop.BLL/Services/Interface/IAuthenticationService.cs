@@ -11,7 +11,11 @@ namespace AzShop.BLL.Services.Interface
     public interface IAuthenticationService
     {
        Task<UserResponse> LoginAsync(LoginRequest loginRequest);
-        Task<UserResponse> RegisterAsync(RegisterRequest registerRequest);
+       Task<UserResponse> RegisterAsync(RegisterRequest registerRequest);
+       Task<string> ConfirmEmail(string token , string userId );
+       Task<bool> ForgotPasswordAsync(ForgotPassword request);
+       Task<bool> ResetPasswordAsync(ResetPasswordRequest request);
+
 
     }
 }

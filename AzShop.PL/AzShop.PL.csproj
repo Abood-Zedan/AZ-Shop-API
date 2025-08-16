@@ -20,4 +20,12 @@
     <ProjectReference Include="..\AzShop.BLL\AzShop.BLL.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\Images\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\Images\8a310743-c69d-4293-8f8f-fa447971fa2d.jpg" />
+  </ItemGroup>
+
 </Project>

@@ -11,5 +11,6 @@ namespace AzShop.BLL.Services.Interface
 {
     public interface IBrandService : IGenericService<BrandRequest,BrandResponse,Brand>
     {
+        Task<int> CreateFile(BrandRequest request);
     }
 }

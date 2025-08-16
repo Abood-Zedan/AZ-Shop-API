@@ -1,0 +1,29 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\src\\Web\\Full-Stack\\BackEnd\\api\\Project\\AzShop\\AzShop.PL\\wwwroot\\Images\\8a310743-c69d-4293-8f8f-fa447971fa2d.jpg",
+      "PackagePath": "staticwebassets\\Images\\8a310743-c69d-4293-8f8f-fa447971fa2d.jpg"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.AzShop.PL.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.AzShop.PL.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.build.AzShop.PL.props",
+      "PackagePath": "build\\AzShop.PL.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.buildMultiTargeting.AzShop.PL.props",
+      "PackagePath": "buildMultiTargeting\\AzShop.PL.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.buildTransitive.AzShop.PL.props",
+      "PackagePath": "buildTransitive\\AzShop.PL.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

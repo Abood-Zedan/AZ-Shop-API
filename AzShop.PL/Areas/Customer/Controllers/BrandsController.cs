@@ -6,8 +6,8 @@ using Microsoft.AspNetCore.Mvc;
 namespace AzShop.PL.Areas.Customer.Controllers
 {
     [Route("api/[area]/[controller]")]
-    [Area("Cutomer")]
-    [Authorize(Roles = "Cutomer")]
+    [Area("Customer")]
+    [Authorize(Roles = "Customer")]
     [ApiController]
     public class BrandsController : ControllerBase
     {

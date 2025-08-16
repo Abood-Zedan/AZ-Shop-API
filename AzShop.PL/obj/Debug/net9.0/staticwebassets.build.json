@@ -1,12 +1,125 @@
 {
   "Version": 1,
-  "Hash": "Lze6V22LeWaKv3VS7J63BoN32ql9FgoN1mAa+f8WI2U=",
+  "Hash": "+SYdQDu3lzmkjbzrBOzomIMsUu/SvtJVAc2PevkMn+I=",
   "Source": "AzShop.PL",
   "BasePath": "_content/AzShop.PL",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": [],
-  "Endpoints": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "AzShop.PL\\wwwroot",
+      "Source": "AzShop.PL",
+      "ContentRoot": "C:\\src\\Web\\Full-Stack\\BackEnd\\api\\Project\\AzShop\\AzShop.PL\\wwwroot\\",
+      "BasePath": "_content/AzShop.PL",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\src\\Web\\Full-Stack\\BackEnd\\api\\Project\\AzShop\\AzShop.PL\\wwwroot\\Images\\8a310743-c69d-4293-8f8f-fa447971fa2d.jpg",
+      "SourceId": "AzShop.PL",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\src\\Web\\Full-Stack\\BackEnd\\api\\Project\\AzShop\\AzShop.PL\\wwwroot\\",
+      "BasePath": "_content/AzShop.PL",
+      "RelativePath": "Images/8a310743-c69d-4293-8f8f-fa447971fa2d#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "2x2dwrkse9",
+      "Integrity": "BvwqWNJdg2ElpioJCki/IOeLmWvDcSb4bf+fzv8b90I=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\8a310743-c69d-4293-8f8f-fa447971fa2d.jpg"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "Images/8a310743-c69d-4293-8f8f-fa447971fa2d.2x2dwrkse9.jpg",
+      "AssetFile": "C:\\src\\Web\\Full-Stack\\BackEnd\\api\\Project\\AzShop\\AzShop.PL\\wwwroot\\Images\\8a310743-c69d-4293-8f8f-fa447971fa2d.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "289782"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"BvwqWNJdg2ElpioJCki/IOeLmWvDcSb4bf+fzv8b90I=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 15 Aug 2025 15:08:10 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "2x2dwrkse9"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/8a310743-c69d-4293-8f8f-fa447971fa2d.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-BvwqWNJdg2ElpioJCki/IOeLmWvDcSb4bf+fzv8b90I="
+        }
+      ]
+    },
+    {
+      "Route": "Images/8a310743-c69d-4293-8f8f-fa447971fa2d.jpg",
+      "AssetFile": "C:\\src\\Web\\Full-Stack\\BackEnd\\api\\Project\\AzShop\\AzShop.PL\\wwwroot\\Images\\8a310743-c69d-4293-8f8f-fa447971fa2d.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "289782"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"BvwqWNJdg2ElpioJCki/IOeLmWvDcSb4bf+fzv8b90I=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 15 Aug 2025 15:08:10 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-BvwqWNJdg2ElpioJCki/IOeLmWvDcSb4bf+fzv8b90I="
+        }
+      ]
+    }
+  ]
 }

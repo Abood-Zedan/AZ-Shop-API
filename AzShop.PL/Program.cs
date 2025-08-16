@@ -5,8 +5,10 @@ using AzShop.DAL.Models;
 using AzShop.DAL.Repository.Classes;
 using AzShop.DAL.Repository.Interface;
 using AzShop.DAL.Utils;
+using AzShop.PL.Helper;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Scalar;
@@ -31,8 +33,19 @@ namespace AzShop.PL
             builder.Services.AddScoped<IBrandService, BrandService>();
             builder.Services.AddScoped<ISeedData, SeedData>();
             builder.Services.AddScoped<IAuthenticationService, AuthenticationService>();
+            builder.Services.AddScoped<IEmailSender, EmailSetting>();
+            builder.Services.AddScoped<IProductService, ProductService>();
+            builder.Services.AddScoped<IProductRepository, ProductRepository>();
+            builder.Services.AddScoped<IFileServices, FileServices>();
 
-            builder.Services.AddIdentity<ApplicationUser, IdentityRole>().AddEntityFrameworkStores<ApplicationDbContext>();
+
+            builder.Services.AddIdentity<ApplicationUser, IdentityRole>(optipns =>
+            {
+                optipns.User.RequireUniqueEmail = true;
+                optipns.Password.RequireNonAlphanumeric = false;
+                optipns.Password.RequireUppercase = true;
+                optipns.Password.RequireLowercase = true;
+            }).AddEntityFrameworkStores<ApplicationDbContext>().AddDefaultTokenProviders();
 
             builder.Services.AddControllers();
             // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
@@ -76,6 +89,7 @@ namespace AzShop.PL
 
             app.UseAuthorization();
 
+            app.UseStaticFiles();
 
             app.MapControllers();
 
